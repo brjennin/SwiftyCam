@@ -310,8 +310,8 @@ open class SwiftyCamViewController: UIViewController {
         if let connection =  self.previewLayer?.videoPreviewLayer.connection  {
             
             let currentDevice: UIDevice = UIDevice.current
-            
-            let orientation: UIDeviceOrientation = currentDevice.orientation
+
+			let orientation: UIDeviceOrientation = shouldUseDeviceOrientation ? currentDevice.orientation : UIDeviceOrientation.portrait
             
             let previewLayerConnection : AVCaptureConnection = connection
             
